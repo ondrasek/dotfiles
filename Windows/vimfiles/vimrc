@@ -1,0 +1,10 @@
+call plug#begin('c:\\users\\ondra\\vimfiles\\bundle')
+Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'joshdick/onedark.vim'
+Plug 'powerline/powerline'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'fatih/vim-go'
+call plug#end()

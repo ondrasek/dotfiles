@@ -4,7 +4,60 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'joshdick/onedark.vim'
-Plug 'powerline/powerline'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'fatih/vim-go'
+Plug 'lifepillar/vim-solarized8'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
+
+"" GUI Color Scheme
+colorscheme solarized8_dark_flat
+set guifont=Ubuntu_Mono:h16:cANSI:qDRAFT
+
+"" Locale
+language messages en_US.UTF-8
+set langmenu=en_US.UTF-8
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+
+"" Global Editor Options
+set nocompatible
+set number
+set numberwidth=4
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=Bold guifg=Yellow guibg=NONE
+set hlsearch
+set incsearch
+set nobackup
+set writebackup
+set autoread
+set autowrite
+set backspace=indent,eol,start
+set noexpandtab
+set shiftwidth=4
+set tabstop=4
+set display=lastline
+set wrap
+set textwidth=80
+set showmatch
+set showmode
+set ruler
+set laststatus=2
+
+function! NumberToggle()
+	let [&nu, &rnu] = [!&rnu, &nu+&rnu==1]
+endfunction
+
+noremap <F3> :call NumberToggle()<CR>
+inoremap <F3> <C-O>:call NumberToggle()<CR>
+
+"" Clipboard
+set clipboard=unnamed
+
+"" GUI Options
+set guioptions=aegimtTRr
+
+"" Statusline
+let g:airline_section_b='%{strftime("%c")}'
+let g:airline_section_y='BN: %{bufnr("%")}'
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'

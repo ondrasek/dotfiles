@@ -1,0 +1,7 @@
+> -cur_console:b -cur_console:d:C:\Users\ondra pwsh.exe
+
+-cur_console:b -cur_console:d:C:\Users\ondra powershell.exe
+
+-cur_console:d:C:\Users\ondra set "FARHOME=" & "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins"
+
+-cur_console:b -cur_console:d:C:\Users\ondra "C:\WINDOWS\SYSTEM32\cmd.exe" /k "%ConEmuBaseDir%\CmdInit.cmd"

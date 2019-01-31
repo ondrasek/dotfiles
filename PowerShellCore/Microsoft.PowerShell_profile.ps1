@@ -48,7 +48,7 @@ function Prompt {
     $promptString += Write-Prompt " : "  -ForegroundColor DarkGray
     $promptString += Write-Prompt (Get-Date -Format G)  -ForegroundColor DarkMagenta
 	$vcsStatus = Write-VcsStatus
-	if ($vcStatus) { 
+	if ($vcsStatus) { 
 		$promptString += Write-Prompt " : "  -ForegroundColor DarkGray
 		$promptString += Write-VcsStatus
 	}

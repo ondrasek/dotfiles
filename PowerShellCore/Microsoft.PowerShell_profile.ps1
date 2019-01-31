@@ -26,39 +26,41 @@ function Test-Administrator {
 function Prompt {
     $realLASTEXITCODE = $LASTEXITCODE
 
-    Write-Host
-
+	$promptString = ""
     # Reset color, which can be messed up by Enable-GitColors
     # $Host.UI.RawUI.ForegroundColor = $GitPromptSettings.DefaultForegroundColor
 
     if (Test-Administrator) {  # Use different username if elevated
-        Write-Host "(Elevated) " -NoNewline -ForegroundColor White
+        $promptString += Write-Prompt "(Elevated) " -ForegroundColor White
     }
 
-    Write-Host "$ENV:USERNAME@" -NoNewline -ForegroundColor DarkYellow
-    Write-Host "$ENV:COMPUTERNAME" -NoNewline -ForegroundColor Magenta
+    $promptString += Write-Prompt "$ENV:USERNAME@"  -ForegroundColor DarkYellow
+    $promptString += Write-Prompt "$ENV:COMPUTERNAME"  -ForegroundColor Magenta
 
     if ($s -ne $null) {  # color for PSSessions
-        Write-Host " (`$s: " -NoNewline -ForegroundColor DarkGray
-        Write-Host "$($s.Name)" -NoNewline -ForegroundColor Yellow
-        Write-Host ") " -NoNewline -ForegroundColor DarkGray
+        $promptString += Write-Prompt " (`$s: "  -ForegroundColor DarkGray
+        $promptString += Write-Prompt "$($s.Name)"  -ForegroundColor Yellow
+        $promptString += Write-Prompt ") "  -ForegroundColor DarkGray
     }
 
-    Write-Host " : " -NoNewline -ForegroundColor DarkGray
-    Write-Host $($(Get-Location) -replace ($env:USERPROFILE).Replace('\','\\'), "~") -NoNewline -ForegroundColor Blue
-    Write-Host " : " -NoNewline -ForegroundColor DarkGray
-    Write-Host (Get-Date -Format G) -NoNewline -ForegroundColor DarkMagenta
-    Write-Host " : " -NoNewline -ForegroundColor DarkGray
-	Write-VcsStatus
+    $promptString += Write-Prompt " : "  -ForegroundColor DarkGray
+    $promptString += Write-Prompt $($(Get-Location) -replace ($env:USERPROFILE).Replace('\','\\'), "~")  -ForegroundColor Blue
+    $promptString += Write-Prompt " : "  -ForegroundColor DarkGray
+    $promptString += Write-Prompt (Get-Date -Format G)  -ForegroundColor DarkMagenta
+	$vcsStatus = Write-VcsStatus
+	if ($vcStatus) { 
+		$promptString += Write-Prompt " : "  -ForegroundColor DarkGray
+		$promptString += Write-VcsStatus
+	}
 
     $global:LASTEXITCODE = $realLASTEXITCODE
 	
 	if ($global:LASTEXITCODE -ne 0) {
-		Write-Host " : " -NoNewline -ForegroundColor DarkGray
-		Write-Host "($global:LASTEXITCODE)" -ForegroundColor Yellow
-	} else {
-		Write-Host
-	}
+		$promptString += Write-Prompt " : "  -ForegroundColor DarkGray
+		$promptString += Write-Prompt "($global:LASTEXITCODE)" -ForegroundColor Yellow
+	} 
 
-    return "> "
+	$promptString += Write-Prompt "`nPS> " -ForegroundColor White
+
+	return $promptString
 }

@@ -49,7 +49,8 @@ function Prompt {
     $promptString += Write-Prompt (Get-Date -Format G)  -ForegroundColor DarkMagenta
 	$vcsStatus = Write-VcsStatus
 	if ($vcsStatus) { 
-		$promptString += Write-Prompt " : "  -ForegroundColor DarkGray
+		# There is no need for a trailing space after the colon. VcsStatus already contains spaces.
+		$promptString += Write-Prompt " :"  -ForegroundColor DarkGray
 		$promptString += Write-VcsStatus
 	}
 

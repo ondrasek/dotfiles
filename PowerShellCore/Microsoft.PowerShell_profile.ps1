@@ -44,7 +44,7 @@ function Prompt {
     }
 
     $promptString += Write-Prompt " : "  -ForegroundColor DarkGray
-    $promptString += Write-Prompt $($(Get-Location) -replace ($env:USERPROFILE).Replace('\','\\'), "~")  -ForegroundColor Blue
+    $promptString += Write-Prompt $($(Get-Location) -replace ($env:USERPROFILE).Replace('\','\\'), "~")  -ForegroundColor LightGreen
     $promptString += Write-Prompt " : "  -ForegroundColor DarkGray
     $promptString += Write-Prompt (Get-Date -Format G)  -ForegroundColor DarkMagenta
 	$vcsStatus = Write-VcsStatus
@@ -61,7 +61,9 @@ function Prompt {
 		$promptString += Write-Prompt "($global:LASTEXITCODE)" -ForegroundColor Yellow
 	} 
 
-	$promptString += Write-Prompt "`nPS> " -ForegroundColor White
+	$versionString = "`n{0}.{1}.{2}-{3}" -f $PSVersionTable.PSVersion.Major, $PSVersionTable.PSVersion.Minor, $PSVersionTable.PSVersion.Patch, $PSVersionTable.PSEdition
+	$promptString += Write-Prompt $versionString -ForegroundColor White
+	$promptString += Write-Prompt ">" -ForegroundColor Gray
 
 	return $promptString
 }

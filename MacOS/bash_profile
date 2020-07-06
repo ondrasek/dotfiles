@@ -1,0 +1,23 @@
+export BASH_SILENCE_DEPRECATION_WARNING=1
+GIT_PROMPT_ONLY_IN_REPO=0
+__GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
+__GIT_BASH_PROMPT=$__GIT_PROMPT_DIR/gitprompt.sh
+[ -f $__GIT_BASH_PROMPT ] && source $__GIT_BASH_PROMPT
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/ondra/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/ondra/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/ondra/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/ondra/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+export PATH="$HOME/.cargo/bin:$PATH"

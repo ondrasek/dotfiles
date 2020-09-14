@@ -1,0 +1,26 @@
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+
+[user]
+	name = Ondrej Krajicek
+	email = ondrej.krajicek@ysoft.com
+	signingkey = E5B6A0D9B48C1C7C1147DBD1709D51F7DD1A02A5
+
+[http]
+	sslVerify = false
+
+[core]
+	autocrlf = input
+	pager = delta
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  side-by-side = true
+  line-numbers-left-format = ""
+  line-numbers-right-format = "│ "
+  syntax-theme = Nord

@@ -1,0 +1,29 @@
+# User configuration
+
+# Local MANPATH
+export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+export EDITOR=vim
+
+# Compilation flags
+export ARCHFLAGS="-arch x86_64"
+
+# GNU gettext from homebrew / see brew info gettext
+export LDFLAGS="-L/usr/local/opt/gettext/lib"
+export CPPFLAGS="-I/usr/local/opt/gettext/include"
+export PATH="/usr/local/opt/gettext/bin:$PATH"
+
+# ...other HomeBrew packages :-)
+export PATH=":$HOME/.dotnet/tools:$PATH"
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+export MONO_GAC_PREFIX="/usr/local"
+

@@ -1,0 +1,7 @@
+# gpg-agent
+GPGAGENTINFOFILE=~/.gpg-agent-info
+if [ -f $GPGAGENTINFOFILE ]; then
+	. $GPGAGENTINFOFILE
+	export GPG_AGENT_INFO SSH_AUTH_SOCK SSH_AGENT_PID
+fi
+

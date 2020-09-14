@@ -2,12 +2,6 @@
 ### https://hodgkins.io/ultimate-powershell-prompt-and-git-setup
 ###
 
-# Chocolatey profile
-$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
-if (Test-Path($ChocolateyProfile)) {
-  Import-Module "$ChocolateyProfile"
-}
-
 # Get-ChildItemColor
 Import-Module Get-ChildItemColor
  
@@ -19,8 +13,7 @@ Set-Alias dir Get-ChildItemColor -option AllScope -Force
 Import-Module -Name posh-git
 
 function Test-Administrator {
-    $user = [Security.Principal.WindowsIdentity]::GetCurrent();
-    (New-Object Security.Principal.WindowsPrincipal $user).IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
+  $false
 }
 
 function Prompt {
@@ -44,7 +37,7 @@ function Prompt {
     }
 
     $promptString += Write-Prompt " : "  -ForegroundColor DarkGray
-    $promptString += Write-Prompt $($(Get-Location) -replace ($env:USERPROFILE).Replace('\','\\'), "~")  -ForegroundColor LightGreen
+    $promptString += Write-Prompt $($(Get-Location) -replace ($env:HOME).Replace('\','\\'), "~")  -ForegroundColor Green
     $promptString += Write-Prompt " : "  -ForegroundColor DarkGray
     $promptString += Write-Prompt (Get-Date -Format G)  -ForegroundColor DarkMagenta
 	$vcsStatus = Write-VcsStatus
@@ -63,7 +56,7 @@ function Prompt {
 
 	$versionString = "`n{0}.{1}.{2}-{3}" -f $PSVersionTable.PSVersion.Major, $PSVersionTable.PSVersion.Minor, $PSVersionTable.PSVersion.Patch, $PSVersionTable.PSEdition
 	$promptString += Write-Prompt $versionString -ForegroundColor White
-	$promptString += Write-Prompt ">" -ForegroundColor Gray
+	$promptString += Write-Prompt " " -ForegroundColor Gray
 
 	return $promptString
 }

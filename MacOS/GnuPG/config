@@ -1,0 +1,7 @@
+Host *
+  #UseKeychain yes
+  #AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_rsa.pub
+  IdentitiesOnly yes
+  IdentityAgent $SSH_AUTH_SOCK
+  PKCS11Provider /usr/local/lib/opensc-pkcs11.so

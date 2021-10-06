@@ -1,0 +1,11 @@
+#! /bin/zsh
+
+AgentEnvFile=~/.ssh-agent.env
+
+## Kill current agent
+[ ! -z $SSH_AGENT_PID ] && ssh-agent -K
+
+## Delete previous 
+[ -f $AgentEnvFile ] && rm -vf $AgentEnvFile
+
+ssh-agent 1> $AgentEnvFile

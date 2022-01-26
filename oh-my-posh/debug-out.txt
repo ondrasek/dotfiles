@@ -1,0 +1,165 @@
+
+[1mVersion:[0m 6.49.2
+
+[1mSegments:[0m
+
+ConsoleTitle(true) -   0 ms - 
+session(true)  -   0 ms - [38;2;195;134;241m[0m[48;2;195;134;241m[38;2;255;255;255m [0m[48;2;195;134;241m[38;2;255;255;255mondra-pragmax@GOTHMOG[0m[48;2;195;134;241m[38;2;255;255;255m [0m[38;2;195;134;241m[0m
+path(true)     -   0 ms - [38;2;255;71;156;49m[7m[0m[48;2;255;71;156m[38;2;255;255;255m  [0m[48;2;255;71;156m[38;2;255;255;255moh-my-posh[0m[48;2;255;71;156m[38;2;255;255;255m [0m[38;2;255;71;156m[0m
+git(true)      -   3 ms - [48;2;255;251;56m[38;2;255;71;156m[0m[48;2;255;251;56m[38;2;25;53;73m [0m[48;2;255;251;56m[38;2;25;53;73mmaster[0m[48;2;255;251;56m[38;2;25;53;73m [0m[38;2;255;251;56m[0m
+battery(false) -   1 ms - 
+node(false)    -   0 ms - 
+shell(true)    -   0 ms - [48;2;0;119;194m[38;2;255;251;56m[0m[48;2;0;119;194m[38;2;255;255;255m ﲵ [0m[48;2;0;119;194m[38;2;255;255;255muni[0m[48;2;0;119;194m[38;2;255;255;255m [0m[38;2;0;119;194m[0m
+root(false)    -   0 ms - 
+text(true)     -   0 ms - [48;2;255;255;255m[38;2;0;119;194m[0m[48;2;255;255;255m[38;2;17;17;17m [0m[48;2;255;255;255m[38;2;17;17;17mNO CONFIG[0m[48;2;255;255;255m[38;2;17;17;17m [0m[38;2;255;255;255m[0m
+exit(true)     -   0 ms - [38;2;255;255;255m[0m[38;2;46;149;153;49m[7m[0m[48;2;46;149;153m[38;2;255;255;255m [0m[48;2;46;149;153m[38;2;255;255;255m [0m[38;2;46;149;153m[0m
+
+[1mRun duration:[0m 6.7795ms
+
+[1mLogs:[0m
+
+2022/01/25 17:24:57 debug: getenv
+C:\Users\ondra-pragmax\AppData\Local
+2022/01/25 17:24:57 getenv duration: 0s, args: LOCALAPPDATA
+2022/01/25 17:24:57 getCachePath duration: 517.9µs, args: 
+2022/01/25 17:24:57 getArgs duration: 0s, args: 
+2022/01/25 17:24:57 getArgs duration: 0s, args: 
+2022/01/25 17:24:57 getShellName duration: 0s, args: 
+2022/01/25 17:24:57 debug: getenv
+
+2022/01/25 17:24:57 getenv duration: 0s, args: OMP_CACHE_DISABLED
+2022/01/25 17:24:57 isRunningAsRoot duration: 0s, args: 
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getShellName duration: 0s, args: 
+2022/01/25 17:24:57 getCurrentUser duration: 0s, args: 
+2022/01/25 17:24:57 getHostName duration: 0s, args: 
+2022/01/25 17:24:57 lastErrorCode duration: 0s, args: 
+2022/01/25 17:24:57 environ duration: 0s, args: 
+2022/01/25 17:24:57 getRuntimeGOOS duration: 0s, args: 
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 debug: getenv
+
+2022/01/25 17:24:57 getenv duration: 0s, args: SSH_CONNECTION
+2022/01/25 17:24:57 debug: getenv
+
+2022/01/25 17:24:57 getenv duration: 0s, args: SSH_CLIENT
+2022/01/25 17:24:57 getCurrentUser duration: 0s, args: 
+2022/01/25 17:24:57 getRuntimeGOOS duration: 0s, args: 
+2022/01/25 17:24:57 getHostName duration: 0s, args: 
+2022/01/25 17:24:57 debug: getenv
+
+2022/01/25 17:24:57 getenv duration: 0s, args: POSH_SESSION_DEFAULT_USER
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 getArgs duration: 0s, args: 
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 getRuntimeGOOS duration: 0s, args: 
+2022/01/25 17:24:57 getRuntimeGOOS duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getRuntimeGOOS duration: 0s, args: 
+2022/01/25 17:24:57 stackCount duration: 0s, args: 
+2022/01/25 17:24:57 isRunningAsRoot duration: 0s, args: 
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getShellName duration: 0s, args: 
+2022/01/25 17:24:57 getCurrentUser duration: 0s, args: 
+2022/01/25 17:24:57 getHostName duration: 0s, args: 
+2022/01/25 17:24:57 lastErrorCode duration: 0s, args: 
+2022/01/25 17:24:57 environ duration: 0s, args: 
+2022/01/25 17:24:57 getRuntimeGOOS duration: 0s, args: 
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 getRuntimeGOOS duration: 0s, args: 
+2022/01/25 17:24:57 hasCommand duration: 3.6557ms, args: git.exe
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 hasParentFilePath duration: 0s, args: .git
+2022/01/25 17:24:57 getFileContent duration: 0s, args: C:\Users\ondra-pragmax\Repositories\ondrasek\dotfiles\.git/HEAD
+2022/01/25 17:24:57 error: getFileContent
+open C:\Users\ondra-pragmax\Repositories\ondrasek\dotfiles\.git/logs/refs/stash: The system cannot find the file specified.
+2022/01/25 17:24:57 getFileContent duration: 0s, args: C:\Users\ondra-pragmax\Repositories\ondrasek\dotfiles\.git/logs/refs/stash
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 getBatteryInfo duration: 1.5669ms, args: 
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 hasFiles duration: 520.3µs, args: *.js
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 hasFiles duration: 0s, args: *.ts
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 hasFiles duration: 0s, args: package.json
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 hasFiles duration: 0s, args: .nvmrc
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 hasFiles duration: 0s, args: pnpm-workspace.yaml
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 hasFiles duration: 0s, args: .pnpmfile.cjs
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 hasFiles duration: 0s, args: .npmrc
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 getShellName duration: 0s, args: 
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 isRunningAsRoot duration: 0s, args: 
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 isRunningAsRoot duration: 0s, args: 
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getPathSeperator duration: 0s, args: 
+2022/01/25 17:24:57 getShellName duration: 0s, args: 
+2022/01/25 17:24:57 getCurrentUser duration: 0s, args: 
+2022/01/25 17:24:57 getHostName duration: 0s, args: 
+2022/01/25 17:24:57 lastErrorCode duration: 0s, args: 
+2022/01/25 17:24:57 environ duration: 0s, args: 
+2022/01/25 17:24:57 getRuntimeGOOS duration: 0s, args: 
+2022/01/25 17:24:57 getcwd duration: 0s, args: 
+2022/01/25 17:24:57 lastErrorCode duration: 0s, args: 

@@ -53,10 +53,6 @@ function global:Initialize-ModuleSupport {
     $lastCommandSuccess = $?
     #store the last exit code for restore
     $realLASTEXITCODE = $global:LASTEXITCODE
-
-	Write-Host $lastCommandSuccess
-	Write-Host $realLASTEXITCODE
-
 	$lastCommandSuccess = $lastCommandSuccess -and ($realLASTEXITCODE -eq 0)
 
 	$global:TestLastCommandSuccess = $lastCommandSuccess

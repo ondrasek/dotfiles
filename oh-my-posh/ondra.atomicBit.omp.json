@@ -8,7 +8,7 @@
 
   "console_title": true,
   "console_title_style": "template",
-  "console_title_template": "{{.UserName}} {{.Shell}} in {{.PWD}}",
+  "console_title_template": "{{.Shell}} in {{.PWD}}",
   "final_space": false,
   "osc99": true,
   "blocks": [

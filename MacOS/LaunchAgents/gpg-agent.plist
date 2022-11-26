@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
 <!-- Shamelessly stolen from: https://gist.github.com/nl5887/3c9ad55bdab95e8ba9f8 -->
+<plist version="1.0">
     <dict>
             <key>Label</key>
             <string>my.gpg-agent</string>
@@ -13,9 +13,7 @@
                 <string>/Users/ondra/.gnupg/gpg-agent.conf</string>
                 <string>--enable-ssh-support</string>
                 <string>--log-file</string>
-                <string>/var/log/gpg-agent.log</string>
-                <string>--write-env-file</string>
-                <string>/Users/ondra/.gnupg/gpg-agent-info</string>
+                <string>/tmp/gpg-agent.log</string>
             </array>
             <key>Sockets</key>
             <dict>
@@ -26,17 +24,11 @@
                     </dict>
             </dict>
             <key>StandardOutPath</key>
-            <string>/var/log/gpg-agent.stdout.log</string>
+            <string>/tmp/gpg-agent.stdout.log</string>
             <key>StandardErrorPath</key>
-            <string>/var/log/gpg-agent.error.log</string>
-            <key>RunAtLoad</key>
-	    <true/>
-	    <key>KeepAlive</key>
-	    <true/>
-	    <!--
-            <key>EnableTransactions</key>
-            <true/>
-            -->
+	    <string>/tmp/gpg-agent.error.log</string>
+	    <key>RunAtLoad</key> <true/>
+	    <key>KeepAlive</key> <true/>
             <key>Umask</key>
             <integer>63</integer>
     </dict>

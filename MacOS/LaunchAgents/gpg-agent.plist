@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <!-- Shamelessly stolen from: https://gist.github.com/nl5887/3c9ad55bdab95e8ba9f8 -->
+<!--
+❯ launchctl enable gui/$UID/my.gpg-agent
+❯ launchctl kickstart -kp gui/$UID/my.gpg-agent
+service spawned with pid: 4147
+-->
 <plist version="1.0">
     <dict>
             <key>Label</key>

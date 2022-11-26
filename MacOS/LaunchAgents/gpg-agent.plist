@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
+<!-- Shamelessly stolen from: https://gist.github.com/nl5887/3c9ad55bdab95e8ba9f8 -->
     <dict>
             <key>Label</key>
             <string>my.gpg-agent</string>

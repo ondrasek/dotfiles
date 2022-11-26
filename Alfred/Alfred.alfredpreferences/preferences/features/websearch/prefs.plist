@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>0354D5E9-0A32-4AD8-B6A1-0FA0C2044EB9</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>deep</string>
+			<key>text</key>
+			<string>DEVONagent Pro - Deeper SearchSet</string>
+			<key>url</key>
+			<string>x-devonagent://runSearchSet?name=Deeper&amp;query={query}</string>
+		</dict>
+		<key>13DA8DE7-7400-47BC-B6A4-DEDE1794EC57</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>images</string>
+			<key>text</key>
+			<string>DEVONagent Pro - Images</string>
+			<key>url</key>
+			<string>x-devonagent://runPlugin?identifier=com.devon-technologies.images.plugin&amp;query={query}</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -11,13 +11,20 @@
 NAME=docker
 VMNAME=VirtualMachine # Virtual Machine Service on MacOS
 LIMACTL=/opt/homebrew/bin/limactl
+CPUTHR=5.0
 
 STATUS=${$($LIMACTL list $NAME --format="{{.Status}}")##*( )}
 VMTYPE=${$($LIMACTL list $NAME --format="{{.VMType}}")##*( )}
-CPU=${$(ps -p $(pgrep $VMNAME) -o %cpu | tail -n 1)##*( )}
+CPU=$(ps -p $(pgrep $VMNAME) -o %cpu | tail -n 1)
+
+if (( $CPU <= $CPUTHR )); then
+	CPU=""
+else
+	CPU=$CPU"%"
+fi
 
 if [[ $STATUS == *Running* ]]; then
-	echo $NAME "($VMTYPE) $CPU%"
+	echo $NAME "($VMTYPE)$CPU"
 else
 	echo X
 fi

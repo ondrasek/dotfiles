@@ -1,0 +1,1 @@
+ondra ALL=(ALL) NOPASSWD: /usr/bin/pmset

@@ -4,32 +4,35 @@
 	"type": "action",
 	"identifier": "com.rosemaryorchard.omnifocus.complete-and-await-reply",
 	"version": "1.0",
-	"description": "Mark the currently selected task as complete and add a new task to await the reply.",
-	"label": "Complete and Await Reply",
-	"mediumLabel": "Complete and Await Reply",
-	"paletteLabel": "Complete and Await Reply",
+	"description": "Mark the currently selected task as complete and add a new task to await the reply. Modified by Ondrej Krajicek.",
+	"label": "Follow Up",
+	"mediumLabel": "Follow Up",
+	"paletteLabel": "Follow Up",
 }*/
 (() => {
 	let action = new PlugIn.Action(function(selection) {
 		let duplicatedTasks = new Array()
 		selection.tasks.forEach(function(task) {
+			let originalTask = task;
+
 			insertionLocation = task.after;
 			if(insertionLocation === null) {
 				insertionLocation = inbox.ending
 				}
 				
-			let newTask = duplicateTasks([ task ], insertionLocation)[0];
-			newTask.name = "Follow Up: " + task.name;
+			let newTask = duplicateTasks([ originalTask ], insertionLocation)[0];
+			newTask.name = "Follow Up: " + originalTask.name;
 			duplicatedTasks.push(newTask.id.primaryKey);
 			
 			// Copy and update the task note.
-			originalTaskURLStr = "omnifocus:///task/" + task.id.primaryKey;
-			strToAdd = "Follow Up on: " + originalTaskURLStr + "\n\n";
+			originalTaskURLStr = "omnifocus:///task/" + originalTask.id.primaryKey;
+			strToAdd = "Follow Up on: " + originalTaskURLStr + "\n" + originalTask.name + "\n\n";
 			
 			newNoteText = new Text(strToAdd, newTask.noteText.style);
-			newNoteText.append(task.noteText);
+			newNoteText.append(originalTask.noteText);
 			newTask.noteText = newNoteText;
-			task.markComplete();
+
+			originalTask.markComplete();
 		});
 		
 		idStr = duplicatedTasks.join(",")

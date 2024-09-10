@@ -9,6 +9,7 @@
 	"mediumLabel": "Follow Up",
 	"paletteLabel": "Follow Up",
 }*/
+
 (() => {
 	let action = new PlugIn.Action(function(selection) {
 		let duplicatedTasks = new Array()
@@ -21,12 +22,19 @@
 				}
 				
 			let newTask = duplicateTasks([ originalTask ], insertionLocation)[0];
-			newTask.name = "Follow Up: " + originalTask.name;
 			duplicatedTasks.push(newTask.id.primaryKey);
+
+			if (!originalTask.name.toLowerCase().startsWith("follow up:"))
+				newTask.name = "Follow Up: " + originalTask.name;
 			
 			// Copy and update the task note.
 			originalTaskURLStr = "omnifocus:///task/" + originalTask.id.primaryKey;
-			strToAdd = "Follow Up on: " + originalTaskURLStr + "\n" + originalTask.name + "\n\n";
+			let now = new Date();
+			let parentName = originalTask.parent === null ? "Inbox" : originalTask.parent.name;
+			strToAdd = now.toISOString() + 
+				"Created from Task: " + originalTask.name + "\n" +  
+				"URI: " + originalTaskURLStr + "\n" + 
+				"Project: " + parentName + "\n\n";
 			
 			newNoteText = new Text(strToAdd, newTask.noteText.style);
 			newNoteText.append(originalTask.noteText);

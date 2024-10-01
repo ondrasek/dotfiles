@@ -1,0 +1,1 @@
+displayplacer "id:37D8832A-2D66-02CA-B9F7-8F30A301B230 res:1800x1169 hz:120 color_depth:8 enabled:true scaling:on origin:(0,0) degree:0" "id:3E30A52C-2063-44B4-AEBD-532495A9287D res:1366x1024 hz:60 color_depth:4 enabled:true scaling:on origin:(1800,0) degree:0"
